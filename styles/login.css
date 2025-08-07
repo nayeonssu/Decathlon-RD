@@ -1,1 +1,80 @@
 /* 로그인화면 디자인 */
+
+/* 서브페이지 - 로그인 디자인 */
+main {
+    width:100%; height:1270px;
+    padding:164px 70px 100px;
+    text-align:center;
+}
+main #submenu {}
+/* ----------------------------------------------------------------------------제목 */
+main #submenu h2 {
+    font-size:2.5rem; font-weight:400px; font-family: 'Oswald', sans-serif;
+    margin-bottom:60px;
+}
+/* ----------------------------------------------------------------------------로그인 */
+main #submenu #member-login {width:492px; margin:0 auto 40px;}
+main #submenu #member-login .top {
+    display:flex; flex-flow:column nowrap; gap:20px;
+}
+main #submenu #member-login .top input {border:1px solid #000;}
+main #submenu #member-login .top #email-login {
+    font-size:1.063rem;
+    padding:20px;
+}
+main #submenu #member-login .top #password {
+    font-size:1.063rem;
+    padding:20px;
+}
+main #submenu #member-login .top #storage {
+    text-align:left;
+}
+main #submenu #member-login .top #storage input {}
+main #submenu #member-login .top #storage span {}
+main #submenu #member-login a {
+    display:inline-block;
+    background:#3743BA;
+    color:#fff;
+    font-weight:600;
+    font-size:1.25rem;
+    width:492px;
+    padding:20px;
+    margin:40px 0 0;
+}
+/* ----------------------------------------------------------------------------간편 로그인 */
+main #submenu #easy-login {margin-bottom:60px;}
+main #submenu #easy-login a {
+    margin-right:18px;
+}
+main #submenu #easy-login a:last-child {margin-right:0;}
+main #submenu #easy-login a img {}
+/* ----------------------------------------------------------------------------아이디,비번 찾기 */
+main #submenu #found {margin-bottom:60px;}
+main #submenu #found a {}
+main #submenu #found a:nth-child(1)::after {
+    content: '|';
+    margin-left:20px;
+}
+main #submenu #found a:nth-child(2) {margin-left:20px;}
+/* ----------------------------------------------------------------------------회원가입하기 */
+main #submenu #member-join {margin-bottom:60px; width:492px; margin:0 auto 40px;}
+main #submenu #member-join p {margin-bottom:14px; text-align:left;}
+main #submenu #member-join a {
+    display:inline-block;
+    border:2px solid #3743BA;
+    color:#3743BA;
+    font-weight:600;
+    font-size:1.25rem;
+    width:100%;
+    padding:20px;
+}
+/* ----------------------------------------------------------------------------비회원 주문하기 */
+main #submenu #non-member {
+    display:inline-block;
+    border:2px solid #777;
+    color:#777;
+    font-weight:600;
+    font-size:1.25rem;
+    width:492px;
+    padding:20px;
+}
