@@ -6,6 +6,12 @@
     <title>데카트론 | RD</title>
     <!-- 폰트 연결 -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="./styles/reset.css"><!-- 태그디자인 초기화 -->
     <link rel="stylesheet" href="./styles/common.css"><!-- 헤더, 푸터 디자인 -->
@@ -256,55 +262,57 @@
         <main>
             <div id="main-wrap">
                 <!-- -----------------------------------------------------------------------1행 광고 -->
-                
-                <!-- -----------------------------------------------------------------------2행 신제품 -->
-                <section id="new">
-                    <h2>NEW PERFORMANCE</h2>
-                    <div class="category">
-                        <button type="button" class="tap man">MAN</button>
-                        <button type="button" class="tap girl">WOMAN</button>
-                        <button type="button" class="tap kids">KIDS</button>
-                    </div>
-                    <div class="container">
-                        <!-- 남자 swiper -->
-                        <div class="swiper man-swiper"><!-- 공통이름 Swiper -->
+                <section>
+                    <div id="ad">
+                        <div class="swiper ad-swiper">
+                            <!--필수-->
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide slide1">slide1</div>
-                                <div class="swiper-slide slide2">slide2</div>
-                                <div class="swiper-slide slide3">slide3</div>
-                                <div class="swiper-slide slide3">slide4</div>
-                                <div class="swiper-slide slide3">slide5</div>
-                                <div class="swiper-slide slide3">slide6</div>
-                                <div class="swiper-slide slide3">slide7</div>
+                                <div class="swiper-slide ad1">slide1</div>
+                                <div class="swiper-slide ad2">slide2</div>
+                                <div class="swiper-slide ad3">slide3</div>
+                                <div class="swiper-slide ad4">slide4</div>
                             </div>
-                        </div>
-                        <!-- 여자 swiper -->
-                        <div class="swiper woman-swiper"><!-- 공통이름 Swiper -->
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide slide1">slide1</div>
-                                <div class="swiper-slide slide2">slide2</div>
-                                <div class="swiper-slide slide3">slide3</div>
-                                <div class="swiper-slide slide3">slide4</div>
-                                <div class="swiper-slide slide3">slide5</div>
-                                <div class="swiper-slide slide3">slide6</div>
-                                <div class="swiper-slide slide3">slide7</div>
-                            </div>
-                        </div>
-                        <!-- 키즈 swiper -->
-                        <div class="swiper kids-swiper"><!-- 공통이름 Swiper -->
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide slide1">slide1</div>
-                                <div class="swiper-slide slide2">slide2</div>
-                                <div class="swiper-slide slide3">slide3</div>
-                                <div class="swiper-slide slide3">slide4</div>
-                                <div class="swiper-slide slide3">slide5</div>
-                                <div class="swiper-slide slide3">slide6</div>
-                                <div class="swiper-slide slide3">slide7</div>
+                            <!--필요 시 사용(선택)-->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="page-bar">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-scrollbar"></div>
                             </div>
                         </div>
                     </div>
                 </section>
-                
+                <!-- -----------------------------------------------------------------------2행 신제품 -->
+                <section>
+                    <div id="new">
+                        <h2>NEW PERFORMANCE</h2>
+                        <div class="tap">
+                            <button type="button" class="man">MAN</button>
+                            <button type="button" class="girl">WOMAN</button>
+                            <button type="button" class="kids">KIDS</button>
+                        </div>
+                        <div class="container">
+                            <!-- 남자 swiper -->
+                            <div class="swiper man-swiper"><!-- 공통이름 Swiper -->
+                                <div class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide slide1"></div> -->
+                                </div>
+                            </div>
+                            <!-- 여자 swiper -->
+                            <div class="swiper woman-swiper"><!-- 공통이름 Swiper -->
+                                <div class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide slide1"></div> -->
+                                </div>
+                            </div>
+                            <!-- 키즈 swiper -->
+                            <div class="swiper kids-swiper"><!-- 공통이름 Swiper -->
+                                <div class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide slide1"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!-- -----------------------------------------------------------------------3행 계절 -->
                 
                 <!-- -----------------------------------------------------------------------4행 스포츠 -->
@@ -329,19 +337,17 @@
                     <div class="footer-info">
                         <h5>사업자 정보</h5>
                         <address>
-                            주식회사 데카트론코리아(DECATHLON KOREA CP.,LTD.)<br>
-                            대표 : 구정연<br>
-                            주소 : 서울특별시 강남구 봉은사로 125<br>
-                            사업자등록번호 : 542-86-00304 사업자정보확인 | 통신판매업신고 : 2018-서울강남-03300<br>
-                            호스팅 사용자 : 아마존 웹 서비스(AWS) | 대표번호 : 1800-2025
+                            주식회사 데카트론코리아(DECATHLON KOREA CP.,LTD.)<br>대표 : 구정연<br>주소 : 서울특별시 강남구 봉은사로 125<br>사업자등록번호 : 542-86-00304 사업자정보확인 | 통신판매업신고 : 2018-서울강남-03300<br>호스팅 사용자 : 아마존 웹 서비스(AWS) | 대표번호 : 1800-2025
                         </address>
                     </div>
                     <div class="footer-sns">
                         <h5>Follow Us</h5>
-                        <a href="#"><img src="./images/icon_facebook.png" alt="facebook"></a>
-                        <a href="#"><img src="./images/icon_youtube.png" alt="youtube"></a>
-                        <a href="#"><img src="./images/icon_instagram.png" alt="instagram"></a>
-                        <a href="#"><img src="./images/icon_kakaotalk.png" alt="kakaotalk"></a>
+                        <div class="sns">
+                            <a href="#"><img src="./images/footer/icon_facebook.png" alt="facebook"></a>
+                            <a href="#"><img src="./images/footer/icon_youtube.png" alt="youtube"></a>
+                            <a href="#"><img src="./images/footer/icon_instagram.png" alt="instagram"></a>
+                            <a href="#"><img src="./images/footer/icon_kakaotalk.png" alt="kakaotalk"></a>
+                        </div>
                     </div>
                 </div>
         
@@ -378,11 +384,34 @@
         
                 <div class="right">
                     <h5>데카트론 App 다운로드</h5>
-                    <a href="#" id="google-play"><img src="./images/app_google.png" alt="구글플레이앱 설치하기"></a>
-                    <a href="#" id="app-store"><img src="./images/app_app.png" alt="앱스토어 설치하기"></a>
+                    <div class="download">
+                        <a href="#" id="google-play"><img src="./images/footer/app_google.png" alt="구글플레이앱 설치하기"></a>
+                        <a href="#" id="app-store"><img src="./images/footer/app_app.png" alt="앱스토어 설치하기"></a>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
 </body>
 </html>
+
+<!-- <div class="swiper-slide">
+    <div class="pd-img">
+        <span class="badge">여기에 badge요소</span>
+        <div class="color-dote"><span>여기에 color</span></div>
+        <button type="button" class="cart-in"><img src="" alt="장바구니 담기"></button>
+    </div>
+    <div class="pd-info">
+        <a class="info-top">
+            <p class="brand">여기에 brand</p>
+            <h3 class="pd-name">여기에 name</h3>
+        </a>
+        <a class="info-bottom">
+            <del>여기에 originalPrice</del>
+            <div class="pd-price">
+                <span>여기에 salePercent</span>
+                <span>여기에 price</span>
+            </div>
+        </a>
+    </div>
+</div> -->

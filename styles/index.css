@@ -1,1 +1,174 @@
 /* 메인화면 디자인 */
+#main-wrap {text-align:center;}
+#main-wrap h2 {
+    font-size:3.438rem;
+    font-weight:400;
+    font-family: 'Oswald', sans-serif;
+}
+/* -------------------------------------------------------데이터베이스 디자인 s */
+.container .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container .swiper-slide {
+    position: relative;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    box-sizing: border-box;
+    text-align:left;
+}
+
+/* 뱃지 */
+.container .badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px 15px;
+    font-size: 0.813rem;
+    color: white;
+    z-index: 10;
+    
+}
+.container .badge-new {
+    background: #3642B8;
+    color:#fff;
+}
+.container .badge-sale {
+    background: #E63946;
+    color:#fff;
+}
+/* 컬러칩 */
+.color-dote {
+    margin-top: 8px;
+}
+.color-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+/* 장바구니 */
+
+/* 상품 이미지 */
+.container .swiper-slide img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* 상품 이름 */
+.container .swiper-slide h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    color: #333;
+}
+/* 상품 브랜드 */
+.container .swiper-slide p.brand {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 상품 가격 */
+.container .price {
+    font-size: 1rem;
+    color: #111;
+    font-weight: 700;
+}
+/* 상품 원가 */
+.container .price del {
+    color: #999;
+    font-weight: 400;
+    margin-left: 10px;
+}
+/* 상품 세일가 */
+.container .sale {
+    color: #d33;
+    font-weight: 700;
+    margin-left: 10px;
+}
+/* -------------------------------------------------------데이터베이스 디자인 e */
+
+/* -------------------------------------------------------공통 스와이퍼 s */
+/* -------------------------------------------------------공통 스와이퍼 e */
+
+/* -------------------------------------------------------1행 ad s */
+#ad {
+    position:relative;
+}
+#ad .ad-swiper {}
+#ad .ad-swiper .swiper-wrapper {height: 745px;}
+#ad .ad-swiper .swiper-wrapper .swiper-slide {}
+#ad .ad-swiper .swiper-wrapper .ad1 {background:url(../images/main/bg/ad_bg_001.jpg) no-repeat center / cover;}
+#ad .ad-swiper .swiper-wrapper .ad2 {background:url(../images/main/bg/ad_bg_002.jpg) no-repeat center / cover;}
+#ad .ad-swiper .swiper-wrapper .ad3 {background:url(../images/main/bg/ad_bg_003.jpg) no-repeat center / cover;}
+#ad .ad-swiper .swiper-wrapper .ad4 {background:url(../images/main/bg/ad_bg_004.jpg) no-repeat center / cover;}
+/* 방향 + 페이지번호 + 스크롤바 */
+#ad .ad-swiper .swiper-button-prev {background:url(../images/icon/icon_left.png);}
+#ad .ad-swiper .swiper-button-next {background:url(../images/icon/icon_right.png);}
+
+#ad .ad-swiper .page-bar {
+    display: flex;
+    align-items: center;  /* 세로 중앙 정렬 */
+    gap: 10px;
+}
+#ad .ad-swiper .page-bar .swiper-pagination {
+    flex: 1;
+    color:#fff;
+}
+#ad .ad-swiper .page-bar .swiper-scrollbar {
+    /* 스크롤바 토탈색 */
+    background:rgba(255, 255, 255, 0.5);
+    width: 500px;
+    height: 2px;
+    border-radius: 2px;
+}
+#ad .ad-swiper .page-bar .swiper-scrollbar-drag {
+    /* 스크롤바 컬색 */
+    background:#fff;
+    border-radius: 2px;
+    width:calc(100%/4);
+    height: 2px; 
+}
+
+/* 기본 디자인 제거or배치 */
+.swiper-button-prev, .swiper-button-next {
+    width:50px; height:50px;
+    position:absolute;}
+.swiper-button-prev::after, .swiper-button-next::after {display:none;}
+/* -------------------------------------------------------1행 ad e */
+
+/* -------------------------------------------------------2행 ad s */
+section {padding:60px 70px;}
+section:first-child {padding:0;}
+#new {display:flex; flex-flow:column; gap:40px;}
+#new h2 {}
+#new .tap {display: flex; justify-content: center; gap:30px;}
+#new .tap button {
+    position:relative;
+    font-size:1.25rem;
+    display:inline-block; line-height:40px; height:40px;
+}
+#new .tap button::after {
+    content: "";/* 가짜속성에서 보일려면 무조건` 필요함 */
+    position:absolute;/* 위치 */
+    left:0;
+    bottom:0;
+    width:100%;/* a길이만큼 */
+    height:1px;
+    background-color:#000;
+}
+#new .container {}
+#new .container .swiper {}
+#new .container .swiper .swiper-wrapper {}
+#new .container .swiper .swiper-wrapper .swiper-slide {}
+/* -------------------------------------------------------2행 ad e */
