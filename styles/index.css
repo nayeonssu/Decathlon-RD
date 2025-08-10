@@ -7,104 +7,168 @@
 }
 /* -------------------------------------------------------데이터베이스 디자인 s */
 .container .swiper-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; flex-flow:row nowrap;
+    gap: 15px;
 }
 .container .swiper-slide {
     position: relative;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 250px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-    box-sizing: border-box;
+    width: 400px;
     text-align:left;
 }
-
+.container .swiper-slide .pd-img {
+    position:relative;
+    width:100%; height:400px;
+    background:#F2F2F2;
+    cursor: pointer;
+}
 /* 뱃지 */
-.container .badge {
+.container .swiper-slide .pd-img .badge {
     position: absolute;
     top: 0;
     left: 0;
     padding: 7px 15px;
     font-size: 0.813rem;
-    color: white;
+    color: #fff;
     z-index: 10;
-    
 }
-.container .badge-new {
+.container .swiper-slide .pd-img .badge-new {
     background: #3642B8;
     color:#fff;
 }
-.container .badge-sale {
+.container .swiper-slide .pd-img .badge-sale {
     background: #E63946;
     color:#fff;
 }
 /* 컬러칩 */
-.color-dote {
-    margin-top: 8px;
+.container .swiper-slide .pd-img .pd-color {
+    position: absolute; bottom:14px; left:14px;
+    z-index:10;
 }
-.color-dot {
+.container .swiper-slide .pd-img .pd-color .color-dot {
     display: inline-block;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     margin-right: 6px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+    border:1px solid #888;
 }
+
 /* 장바구니 */
-
-/* 상품 이미지 */
-.container .swiper-slide img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 12px;
+.container .swiper-slide .pd-img .cart-in {
+    position:absolute; right:14px; bottom:14px;
+    z-index:10px;
 }
+.container .swiper-slide .pd-img .cart-in .pd-img {}
 
+/* 상품 이미지 */   
+.container .swiper-slide img {}
+
+.container .swiper-slide .pd-info {
+    margin-top:10px;
+    height:95px;
+    display:flex; flex-flow:column nowrap; justify-content:space-between;
+}
 /* 상품 이름 */
 .container .swiper-slide h3 {
-    font-size: 1.1rem;
-    margin: 0 0 8px 0;
-    color: #333;
+    line-height:1.5;
 }
 /* 상품 브랜드 */
 .container .swiper-slide p.brand {
-    margin: 0 0 12px 0;
-    font-weight: 600;
-    color: #666;
-    font-size: 0.9rem;
+    margin-bottom:5px;
+    color:rgba(0, 0, 0, 0.4);
 }
-
+section .event .container .swiper-slide p.brand {color:rgba(255, 255, 255, 0.4);}
+/* 상품 이름 */
+section .event .container .swiper-slide .pd-info .info-top .pd-name {color:#fff;}
 /* 상품 가격 */
-.container .price {
-    font-size: 1rem;
-    color: #111;
-    font-weight: 700;
-}
+.container .swiper-slide .pd-info .info-bottom {}
 /* 상품 원가 */
-.container .price del {
-    color: #999;
-    font-weight: 400;
-    margin-left: 10px;
+.container .swiper-slide .pd-info .info-bottom del {
+    color:rgba(0, 0, 0, 0.4);
+}
+section .event .container .swiper-slide .pd-info .info-bottom del {
+    color:rgba(255, 255, 255, 0.4);
 }
 /* 상품 세일가 */
-.container .sale {
-    color: #d33;
-    font-weight: 700;
-    margin-left: 10px;
+.container .swiper-slide .pd-info .info-bottom .pd-price {}
+.container .swiper-slide .pd-info .info-bottom .pd-price span {
+    font-weight: 600;
+    font-size:1.125rem;
+    margin-right:5px;
 }
+section .event .container .swiper-slide .pd-info .info-bottom .pd-price span {color:#fff;}
+.container .swiper-slide .pd-info .info-bottom .pd-price .price-sale {
+    color:#FF3232;
+}
+section .event .container .swiper-slide .pd-info .info-bottom .pd-price .price-sale {color:#FF3232;}
 /* -------------------------------------------------------데이터베이스 디자인 e */
 
-/* -------------------------------------------------------공통 스와이퍼 s */
-/* -------------------------------------------------------공통 스와이퍼 e */
+/* -------------------------------------------------------공통 디자인 s */
+
+section {padding:60px 0;}
+section:first-child {padding:0;}
+section h2 {}
+section .tap {display: flex; justify-content: center; gap:30px;}
+section .tap button {
+    position:relative;
+    font-size:1.25rem;
+    display:inline-block; line-height:40px; height:40px;
+}
+
+section .tap button::after {
+    content: "";/* 가짜속성에서 보일려면 무조건` 필요함 */
+    position:absolute;/* 위치 */
+    left:0;
+    bottom:0;
+    width:100%;/* a길이만큼 */
+    height:1px;
+    background-color:#000;
+    display: none; /* 기본 숨김 */
+}
+section .event .tap button::after {
+    background-color:#fff;
+}
+section .tap button.active::after {
+    display: block; /* active일 때만 보임 */
+}
+
+section .container {}
+section .container .swiper {}
+section .container .swiper .swiper-wrapper {}
+section .container .swiper .swiper-wrapper .swiper-slide {}
+
+/* -------------------------------------------------------공통 디자인 e */
+
+/* -------------------------------------------------------공통 more 디자인 s */
+
+.more {
+    display:inline-block;
+    line-height:39px;
+    width:107px;
+    margin:20px auto 0;
+    padding:0 33px;
+    border:1px solid #000;
+    font-size:0.938rem;
+}
+.more:hover {
+    background:#000; color:#fff;
+    transition: all 0.3s ease;
+}
+
+section .event .more {
+    color:#fff;
+    border:1px solid #fff;
+}
+/* 3,4행 more버튼 */
+section .event .more:hover {
+    background:#fff; color:#000;
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------------------------------공통 more 디자인 e */
 
 /* -------------------------------------------------------1행 ad s */
-#ad {
-    position:relative;
-}
+#ad {position:relative;}
 #ad .ad-swiper {}
 #ad .ad-swiper .swiper-wrapper {height: 745px;}
 #ad .ad-swiper .swiper-wrapper .swiper-slide {}
@@ -147,28 +211,101 @@
 .swiper-button-prev::after, .swiper-button-next::after {display:none;}
 /* -------------------------------------------------------1행 ad e */
 
-/* -------------------------------------------------------2행 ad s */
-section {padding:60px 70px;}
-section:first-child {padding:0;}
+/* -------------------------------------------------------2행 new s */
 #new {display:flex; flex-flow:column; gap:40px;}
-#new h2 {}
-#new .tap {display: flex; justify-content: center; gap:30px;}
-#new .tap button {
-    position:relative;
-    font-size:1.25rem;
-    display:inline-block; line-height:40px; height:40px;
+/* -------------------------------------------------------2행 new e */
+
+/* -------------------------------------------------------3행 season s */
+section:nth-child(3) {
+    background:url(../images/main/bg/bg_001.jpg);
+    padding:60px 0 60px 150px;
+    margin:60px 0;
 }
-#new .tap button::after {
-    content: "";/* 가짜속성에서 보일려면 무조건` 필요함 */
-    position:absolute;/* 위치 */
-    left:0;
-    bottom:0;
-    width:100%;/* a길이만큼 */
-    height:1px;
-    background-color:#000;
+#season {
+    display:flex; justify-content:space-between;
 }
-#new .container {}
-#new .container .swiper {}
-#new .container .swiper .swiper-wrapper {}
-#new .container .swiper .swiper-wrapper .swiper-slide {}
-/* -------------------------------------------------------2행 ad e */
+#season .left_menu {
+    display:flex; flex-flow:column nowrap; justify-content:space-between;
+}
+#season .left_menu .text {}
+#season .left_menu .text h2 {color:#fff;}
+#season .left_menu .text > p {margin-top:15px; color:#fff; line-height:1.5;}
+#season .left_menu .tap {
+    display:flex; flex-flow:column nowrap;
+}
+#season .left_menu .tap > button {color:#fff;}
+#season .container .swiper {width:1334px;}
+/* -------------------------------------------------------3행 season e */
+
+/* -------------------------------------------------------4행 sports s */
+section:nth-child(4) {
+    background:url(../images/main/bg/bg_002.jpg);
+    padding:60px 0 60px 150px;
+    margin:60px 0;
+}
+#sports {
+    display:flex; justify-content:space-between;
+}
+#sports .left_menu {
+    display:flex; flex-flow:column nowrap; justify-content:space-between;
+}
+#sports .left_menu .text {}
+#sports .left_menu .text h2 {
+    color:#fff;
+}
+#sports .left_menu .text > p {margin-top:15px; color:#fff; line-height:1.5;}
+#sports .left_menu .tap {
+    display:flex; flex-flow:column nowrap;
+}
+#sports .left_menu .tap > button {color:#fff;}
+#sports .container .swiper {width:1334px;}
+/* -------------------------------------------------------4행 sports e */
+
+/* -------------------------------------------------------5행 brands s */
+
+#brands {display:flex; gap:40px; justify-content:center;}
+#brands a.brand1 {
+    background:url(../images/main/brand/brand_bg_kiprun.jpg) no-repeat center / cover;
+}
+#brands a.brand2 {
+    background:url(../images/main/brand/brand_bg_decathlon.jpg) no-repeat center / cover;
+}
+#brands a {
+    width:870px; height:420px;
+    position: relative;
+}
+#brands a::after {
+    content: "";
+    position: absolute;
+    left:0; top:0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+#brands a:hover::after {
+    opacity: 1;
+}
+#brands a .info {
+    z-index:10;
+    position:absolute; top:110px; left:102px;
+    text-align:left;
+}
+#brands a .info img {}
+#brands a .info h2 {color: #fff; margin:15px 0 10px; font-size:2.75rem;}
+#brands a .info p:nth-of-type(1) {color: #fff;}
+#brands a .info p:nth-of-type(2) {
+    background:#fff;
+    width:134px; line-height:39px;
+    text-align:center;
+    margin-top:52px;
+}
+
+/* -------------------------------------------------------5행 brands e */
+
+/* -------------------------------------------------------6행 kidslook s */
+#kids-look {display:flex; flex-flow:column; gap:40px;}
+/* -------------------------------------------------------6행 kidslook e */
+
+/* -------------------------------------------------------7행 sale s */
+#sale {display:flex; flex-flow:column; gap:40px;}
+/* -------------------------------------------------------7행 sale e */
