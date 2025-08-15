@@ -44,8 +44,17 @@ var seasonSwiper = new Swiper('#season .ad-swiper', {
     },
 })
 
-/* ------------------------------------------------------------2행 new스와이퍼 */
+/* ------------------------------------------------------------제품 스와이퍼 */
 const allSwiper = new Swiper('.container .swiper', {
     slidesPerView:'auto',
     centeredSlides: false,
+})
+
+/* ------------------------------------------------------------9행 new스와이퍼 */
+const activeSwiper = new Swiper('.active-swiper', {
+    slidesPerView:'auto',
+    loop:true,
+    centeredSlides:true,
+    autoplay:{delay:3000},
+    direction:'horizontal',
 })

@@ -309,3 +309,79 @@ section:nth-child(4) {
 /* -------------------------------------------------------7행 sale s */
 #sale {display:flex; flex-flow:column; gap:40px;}
 /* -------------------------------------------------------7행 sale e */
+
+/* -------------------------------------------------------8행 celeb s */
+#celeb {display:flex; flex-flow:column; gap:40px;}
+#celeb h2 {}
+#celeb .fit {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+#celeb .fit li {}
+
+#celeb .fit li .celeb-img {
+    margin-bottom:30px;
+}
+#celeb .fit li .celeb-img a {}
+#celeb .fit li .celeb-img a img {}
+
+#celeb .fit li .celeb-pd {
+    display:flex; flex-flow:column nowrap; gap:15px;
+}
+#celeb .fit li .celeb-pd a {
+    display:flex; gap:20px;
+    align-items:center;
+    text-align:left;
+}
+#celeb .fit li .celeb-pd a img {}
+#celeb .fit li .celeb-pd a .pd-info {}
+#celeb .fit li .celeb-pd a .pd-info .info-top {
+    margin-bottom:10px;
+}
+#celeb .fit li .celeb-pd a .pd-info .info-top .brand {
+    color:rgba(0, 0, 0, 0.5);
+}
+#celeb .fit li .celeb-pd a .pd-info .info-top .pd-name {
+    line-height:1.5;
+    margin-top:5px;
+}
+#celeb .fit li .celeb-pd a .pd-info .info-bottom {}
+#celeb .fit li .celeb-pd a .pd-info .info-bottom del {
+    color:rgba(0, 0, 0, 0.5);
+    font-size:0.813rem;
+}
+#celeb .fit li .celeb-pd a .pd-info .info-bottom .pd-price {
+    margin-top:5px;
+}
+#celeb .fit li .celeb-pd a .pd-info .info-bottom .pd-price span {
+    font-size:1.125rem;
+    font-weight:600;
+}
+#celeb .fit li .celeb-pd a .pd-info .info-bottom .pd-price .price-sale {
+    margin-right:5px;
+    color:#FF3232;
+}
+/* -------------------------------------------------------8행 celeb e */
+
+/* -------------------------------------------------------9행 active s */
+#active {}
+#active h2 {margin-bottom:40px;}
+#active .active-swiper {}
+#active .active-swiper .swiper-wrapper {}
+#active .active-swiper .swiper-wrapper .swiper-slide {
+    width:438px;
+    margin-right:10px;
+}
+#active .active-swiper .swiper-wrapper .swiper-slide a {
+    position:relative;
+}
+#active .active-swiper .swiper-wrapper .swiper-slide a img {}
+#active .active-swiper .swiper-wrapper .swiper-slide a h4 {
+    position:absolute; left:33px; bottom:35px;
+    font-size:1.563rem;
+    font-weight:600;
+    color:#fff;
+}
+
+/* -------------------------------------------------------9행 active d */

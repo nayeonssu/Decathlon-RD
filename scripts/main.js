@@ -44,7 +44,7 @@ function renderProducts(container, items) {
                         <h3 class="pd-name">${product.name}</h3>
                     </a>
                         <a href="#" class="info-bottom">
-                        ${product.originalPrice ? `<del>₩${product.originalPrice.toLocaleString()}</del>` : ''}
+                        ${product.originalPrice ? `<del>${product.originalPrice.toLocaleString()}</del>` : ''}
                         <div class="pd-price">
                             ${product.salePercent ? `<span class="price-sale">${product.salePercent}%</span>` : ''}
                             <span>₩${product.price.toLocaleString()}</span>
@@ -103,7 +103,7 @@ function renderProducts(container, items) {
                         <h3 class="pd-name">${product.name}</h3>
                     </a>
                     <a href="#" class="info-bottom">
-                        ${product.originalPrice ? `<del>₩${product.originalPrice.toLocaleString()}</del>` : ''}
+                        ${product.originalPrice ? `<del>${product.originalPrice.toLocaleString()}</del>` : ''}
                         <div class="pd-price">
                             ${product.salePercent ? `<span class="price-sale">${product.salePercent}%</span>` : ''}
                             <span>${product.price.toLocaleString()}</span>
@@ -162,7 +162,7 @@ function renderProducts(container, items) {
                         <h3 class="pd-name">${product.name}</h3>
                     </a>
                     <a href="#" class="info-bottom">
-                        ${product.originalPrice ? `<del>₩${product.originalPrice.toLocaleString()}</del>` : ''}
+                        ${product.originalPrice ? `<del>${product.originalPrice.toLocaleString()}</del>` : ''}
                         <div class="pd-price">
                             ${product.salePercent ? `<span class="price-sale">${product.salePercent}%</span>` : ''}
                             <span>${product.price.toLocaleString()}</span>
@@ -220,7 +220,7 @@ function renderProducts(container, items) {
                         <h3 class="pd-name">${product.name}</h3>
                     </a>
                     <a href="#" class="info-bottom">
-                        ${product.originalPrice ? `<del>₩${product.originalPrice.toLocaleString()}</del>` : ''}
+                        ${product.originalPrice ? `<del>${product.originalPrice.toLocaleString()}</del>` : ''}
                         <div class="pd-price">
                             ${product.salePercent ? `<span class="price-sale">${product.salePercent}%</span>` : ''}
                             <span>${product.price.toLocaleString()}</span>
@@ -281,7 +281,7 @@ function renderProducts(container, items) {
                         <h3 class="pd-name">${product.name}</h3>
                     </a>
                     <a href="#" class="info-bottom">
-                        ${product.originalPrice ? `<del>₩${product.originalPrice.toLocaleString()}</del>` : ''}
+                        ${product.originalPrice ? `<del>${product.originalPrice.toLocaleString()}</del>` : ''}
                         <div class="pd-price">
                             ${product.salePercent ? `<span class="price-sale">${product.salePercent}%</span>` : ''}
                             <span>${product.price.toLocaleString()}</span>
