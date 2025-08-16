@@ -2,7 +2,7 @@
 /* ------------------------------------------------------------1행 ad스와이퍼 */
 var adSwiper = new Swiper('#ad .ad-swiper', { 
     loop:true,/* 무한루프 */
-    autoplay:{delay:3000},
+    autoplay:{delay:5000},
     direction:'horizontal',/* 이동하는 방향 */
     /* 방향 */
     navigation:{

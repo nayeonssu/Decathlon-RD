@@ -41,6 +41,9 @@ main #submenu #member-login a {
     padding:20px;
     margin:40px 0 0;
 }
+main #submenu #member-login a:hover {
+    background:#343FA9;
+}
 /* ----------------------------------------------------------------------------간편 로그인 */
 main #submenu #easy-login {margin-bottom:60px;}
 main #submenu #easy-login a {
@@ -51,6 +54,7 @@ main #submenu #easy-login a img {}
 /* ----------------------------------------------------------------------------아이디,비번 찾기 */
 main #submenu #found {margin-bottom:60px;}
 main #submenu #found a {color:#777;}
+main #submenu #found a:hover {color:#000;}
 main #submenu #found a:nth-child(1)::after {
     content: '|';
     color:#777;
@@ -62,20 +66,28 @@ main #submenu #member-join {margin-bottom:60px; width:492px; margin:0 auto 40px;
 main #submenu #member-join p {margin-bottom:14px; text-align:left;}
 main #submenu #member-join a {
     display:inline-block;
-    border:2px solid #3743BA;
+    border:1px solid #3743BA;
     color:#3743BA;
-    font-weight:600;
+    font-weight:500;
     font-size:1.25rem;
     width:100%;
     padding:20px;
 }
+main #submenu #member-join a:hover {
+    border:1px solid #343FA9;
+    color:#343FA9;
+}
 /* ----------------------------------------------------------------------------비회원 주문하기 */
 main #submenu #non-member {
     display:inline-block;
-    border:2px solid #aaa;
+    border:1px solid #aaa;
     color:#aaa;
-    font-weight:600;
+    font-weight:500;
     font-size:1.25rem;
     width:492px;
     padding:20px;
+}
+main #submenu #non-member:hover {
+    border:1px solid #000;
+    color:#000;
 }

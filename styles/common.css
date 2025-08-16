@@ -1,5 +1,12 @@
 /* 헤더, 푸터 디자인 */
-header {padding:0 70px;}
+header {
+    padding:0 70px;
+    z-index:999;
+    position:fixed; top:0; left:0;
+    width:100%;
+    background:#fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);/* 그림자 */
+}
 /* -------------------------------------------------- header - s */
 #header-wrap {
     display:flex; flex-flow:row nowrap; justify-content:space-between;
@@ -20,10 +27,10 @@ header {padding:0 70px;}
     display:flex; flex-flow:row nowrap; justify-content:space-between;
 }
 #header-wrap nav .gnb > li {
-    position:relative;
     margin:0 25px;
 }
 #header-wrap nav .gnb > li > a {
+    position:relative;
     display:inline-block;/* 줘야지 높이가 들어감 */
     line-height:64px;
     font-weight:500; font-size:1.063rem;
@@ -33,31 +40,57 @@ header {padding:0 70px;}
 }
 /* 밑줄 디자인 */
 #header-wrap nav .gnb > li > a::after {
-    content: "";/* 가짜속성에서 보일려면 무조건` 필요함 */
-    position:absolute;/* 위치 */
+    content: "";
+    position:absolute;
     left:0;
     bottom:0;
-    width:100%;/* a길이만큼 */
+    width:100%;
     height:1px;
     background-color:#3642B8;
 
-    transform: scaleX(0);/* scale을 0으로 dislplay:none을 대신한다. */
+    transform: scaleX(0);
     transform-origin:center;
     transition: transform 0.15s ease;
 }
 #header-wrap nav .gnb > li > a:hover::after {
     transform: scaleX(1);
 }
-#header-wrap nav .gnb > li > .lnb {
-    display:flex; flex-flow:row nowrap; justify-content:space-between;
+/* 메인 카테고리 서브메뉴 */
+#header-wrap nav .gnb > li > .lnb-bg {
+    background:#fff;
+    position:absolute; left:50%; top:64px;/* 시작 위치 설정 */
+    width: 100vw;/*  height:342px; */
+    transform: translateX(-50%);
+    padding:30px 0;
     display:none;
 }
-#header-wrap nav .gnb > li .lnb > li {}
-#header-wrap nav .gnb > li .lnb > li .lnb-title {}
-#header-wrap nav .gnb > li .lnb > li .lnb-list  {}
-#header-wrap nav .gnb > li .lnb > li .lnb-list li  {}
-#header-wrap nav .gnb > li .lnb > li .lnb-list li a  {}
-
+#header-wrap nav .gnb > li:hover > .lnb-bg {
+    display:block;
+}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 {
+    display:flex; flex-flow:row nowrap; gap:60px;
+    background:#fff;
+    width:max-content;
+    margin:0 auto;
+    text-align:center;
+}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li {}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li span {
+    font-weight:500;
+}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li .lnb-depth2 {
+    display:flex; flex-flow:column nowrap; gap:15px;
+    margin-top:20px;
+}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li .lnb-depth2 li {}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li .lnb-depth2 li a {
+    font-size:0.875rem;
+    color:#777;
+}
+#header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 li .lnb-depth2 li a:hover {
+    color:#000;
+    transition:all 0.15s ease-in-out;
+}
 
 #header-wrap .user-menu {
     display:flex; flex-flow:row nowrap; gap:17px;
