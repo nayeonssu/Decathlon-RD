@@ -224,6 +224,7 @@ section .event .more:hover {
 }
 #season .left_menu {
     display:flex; flex-flow:column nowrap; justify-content:space-between;
+    align-items:center;
 }
 #season .left_menu .text {}
 #season .left_menu .text h2 {color:#fff;}
@@ -243,6 +244,7 @@ section .event .more:hover {
 }
 #sports .left_menu {
     display:flex; flex-flow:column nowrap; justify-content:space-between;
+    align-items:center;
 }
 #sports .left_menu .text {}
 #sports .left_menu .text h2 {

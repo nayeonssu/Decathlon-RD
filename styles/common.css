@@ -57,7 +57,7 @@ header {
 }
 /* 메인 카테고리 서브메뉴 */
 #header-wrap nav .gnb > li > .lnb-bg {
-    background:#fff;
+    background:rgba(255, 255, 255, 0.8);
     position:absolute; left:50%; top:64px;/* 시작 위치 설정 */
     width: 100vw;/*  height:342px; */
     transform: translateX(-50%);
@@ -69,7 +69,6 @@ header {
 }
 #header-wrap nav .gnb > li > .lnb-bg .lnb-depth1 {
     display:flex; flex-flow:row nowrap; gap:60px;
-    background:#fff;
     width:max-content;
     margin:0 auto;
     text-align:center;

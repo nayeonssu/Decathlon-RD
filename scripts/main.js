@@ -233,7 +233,7 @@ function renderProducts(container, items) {
 }
 
 // 키즈인 제품만 필터링
-const kidsLookItems = products.filter(p => p.category.includes('kids'));
+const kidsLookItems = products.filter(p => p.category.includes('summer'));
 
 // man, woman 카테고리별로 필터링
 const manItemsKL = kidsLookItems.filter(p => p.category.includes('man')).slice(0, 7);
