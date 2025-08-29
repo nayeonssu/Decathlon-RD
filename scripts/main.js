@@ -233,15 +233,15 @@ function renderProducts(container, items) {
 }
 
 // 키즈인 제품만 필터링
-const kidsLookItems = products.filter(p => p.category.includes('summer'));
+const kidsLookItems = products.filter(p => p.category.includes('kids'));
 
 // man, woman 카테고리별로 필터링
-const manItemsKL = kidsLookItems.filter(p => p.category.includes('man')).slice(0, 7);
-const womanItemsKL = kidsLookItems.filter(p => p.category.includes('woman')).slice(0, 7);
+const boyItemsKL = kidsLookItems.filter(p => p.name.includes('남아')).slice(0, 7);
+const girlItemsKL = kidsLookItems.filter(p => p.name.includes('여아')).slice(0, 7);
 
 // 각각 렌더링
-renderProducts(mankidsLook, manItemsKL);
-renderProducts(womankidsLook, womanItemsKL);
+renderProducts(mankidsLook, boyItemsKL);
+renderProducts(womankidsLook, girlItemsKL);
 
 /* ---------------------------------------------------------------------------세일 목록 */
 
@@ -299,7 +299,7 @@ const saleItems = products.filter(p => p.badge === 'SALE');
 // man, woman, kids 카테고리별로 필터링
 const sportsItems1 = saleItems.filter(p => p.category.includes('hiking')).slice(0, 7);
 const sportsItems2 = saleItems.filter(p => p.category.includes('running')).slice(0, 7);
-const sportsItems3 = saleItems.filter(p => p.category.includes('surping')).slice(0, 7);
+const sportsItems3 = saleItems.filter(p => p.category.includes('surfing')).slice(0, 7);
 const sportsItems4 = saleItems.filter(p => p.category.includes('swimming')).slice(0, 7);
 const sportsItems5 = saleItems.filter(p => p.category.includes('bike')).slice(0, 7);
 const sportsItems6 = saleItems.filter(p => p.category.includes('pilates')).slice(0, 7);
